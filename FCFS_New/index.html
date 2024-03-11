@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>FCFS</title>
+</head>
+<body>
+    <header>
+        <h2>First-Come,First-Served(FCFS) Scheduling</h2>
+        <div class="clock">
+            <span id="clockTime">Clock : 0</span>
+            <span id="MemoryUse">Memory Use : 0.00 %</span>
+            <span> max = 2560KB</span>
+        </div>
+    </header>
+    <section>
+        <div class="col-left">
+            <div class="pcb">
+                <div class="title">
+                    <h3>Job Queue</h3>
+                    <div class="menu">
+                        <a  class="btn add" type="button" id="addProcessBtn">Add process</a>
+                        <a  class="btn tn" type="button" id="terminateBtn">Terminate</a>
+                        <a  class="btn rs" type="button" id="resetBtn">Reset</a>
+                    </div>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Process Name</th>
+                                <th>Arrival Time</th>
+                                <th>Burst Time</th>
+                                <th>Waiting Time</th>
+                                <th>Memory Used</th>
+                                <th>Status Process</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyPCB">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="device">
+                <div class="title">
+                    <h3>I/O Device</h3>
+                    <div class="menu">
+                        <a  class="btn add" type="button" id="addDeviceBtn">Add</a>
+                        <a  class="btn tn" type="button" id="removeDeviceBtn">Remove</a>
+                    </div>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Process Name</th>
+                                <th>Running Time</th>
+                                <th>Respond Time</th>
+                                <th>Status Process</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyDevice">
+                          
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="ready-q">
+                <div class="title">
+                    <h3>Ready Queue</h3>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Process Name</th>
+                                <th>Arrival Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyReadyQ">
+                          
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="device-q">
+                <div class="title">
+                    <h3>I/O Queue</h3>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Process Name</th>
+                                <th>Arrival Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodydeviceQueue">
+                          
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+       
+
+        </div>
+
+    </section>
+    <section>
+        <div class="colL">
+            <div class="terminate">
+                <div class="title">
+                    <h3>Terminate</h3>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Process Name</th>
+                                <th>Arrival Time</th>
+                                <th>Burst Time</th>
+                                <th>Waiting Time</th>
+                                <th>I/O Time</th>
+                                <th>RespondTime</th>
+                                <th>Turn around Time</th>
+                                <th>Status Process</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyTerminate">
+                           
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            
+
+        </div>
+        <div class="colR">
+            <div class="control">
+                <div class="title">
+                    <h3>Controller</h3>
+                </div>
+                <div class="body">
+                    <p>CPU Process : &nbsp;<span id="runningCPU"></span></p>
+                    <p>I/O Process : &nbsp;<span id="runningIO"></span></p>
+                    <p>Average BurstTime : &nbsp;<span id="avgBurst"></span></p>
+                    <p>Average Waiting : &nbsp;<span id="avgWait"></span></p>
+                    <p>Average I/O Time : &nbsp;<span id="avgIO"></span></p>
+                    <p>Average RespondTime : &nbsp;<span id="avgRes"></span></p>
+                    <p>Average TurnaroundTime : &nbsp;<span id="avgTurn"></span></p>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </section>
+    <script type="module" src="./Controller.js"></script>
+   
+</body>
+</html>

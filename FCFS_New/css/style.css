@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+body{
+    background-color: #f5f5f5;
+}
+.btn{
+    text-decoration: none;
+    border: 1px solid black;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 5px #999;
+}
+header{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: #212F3D;
+    color: #ffff;
+    box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+    
+}
+header span{
+    color:#ff051e;
+}
+.clock{
+    display: flex;
+    gap: 20px;
+}
+.clock span{
+    color:#ff051e;
+}
+section{
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+section .col-left{
+    background-color: #ffff;
+    border-bottom: 1px solid #ddd;
+    width: 60%;
+    /* box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+    -moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74); */
+}
+section .col-left .pcb{
+    background-color: #ffff;
+    border-bottom: 1px solid #ddd;
+    height: 50dvh;
+    box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+    -moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+}
+section .col-left .pcb .table{
+   height: 38dvh;
+   width: 100%;
+   overflow-y: scroll;
+}
+section .col-left .pcb .title{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    background-color: #212F3D;
+    color: #ffff;
+}
+section .col-left .pcb .title .menu,
+section .col-left .device .title .menu{
+    display: flex;
+    gap: 10px;
+}
+
+section .col-left .device .title .menu .add,
+section .col-left .pcb .title .menu .add{
+    background-color: green;
+    color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+}
+section .col-left .device .title .menu .tn,
+section .col-left .pcb .title .menu .tn{
+    background-color:red;
+    color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+}
+section .col-left .pcb .title .menu .rs{
+    background-color: rgb(71, 51, 223);
+    color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+}
+section .col-left .device .title .menu .add:active,
+section .col-left .pcb .title .menu .add:active {
+    background-color: darkgreen;
+    box-shadow: 0 1px #666;
+    transform: translateY(8px); /* Increase the translateY value */
+}
+
+section .col-left .device .title .menu .tn:active,
+section .col-left .pcb .title .menu .tn:active {
+    background-color: darkred;
+    box-shadow: 0 1px #666;
+    transform: translateY(8px); /* Increase the translateY value */
+}
+
+section .col-left .pcb .title .menu .rs:active {
+    background-color: rgb(45, 22, 150);
+    box-shadow: 0 1px #666;
+    transform: translateY(8px); /* Increase the translateY value */
+}
+section .col-right{
+    width: 40%;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 3dvh;
+}
+section .col-right .ready-q{
+    height: 50dvh;
+    background-color: #FFFF;
+    box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+}
+section .col-right .device-q{
+    height: 40dvh;
+    background-color: #FFFF;
+    box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+}
+section .col-right .ready-q .table{
+    height: 40dvh;
+    overflow-y: scroll;
+}
+section .col-right .device-q .table{
+    height: 30dvh;
+    overflow-y: scroll;
+}
+section .col-right .ready-q .title,
+section .col-right .device-q .title{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;  
+    background-color: #212F3D;
+    color: #ffff;
+}
+section .col-left .device{
+    margin-top: 20px;
+    height: 40dvh;
+    background-color: #FFFF;
+    box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+    
+}
+section .col-left .device .table{
+    height: 28dvh;
+    overflow-y: scroll;
+}
+section .col-left .device .title{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;  
+    background-color: #212F3D;
+    color: #ffff;
+}
+
+section .col-left .pcb table,
+section .col-right .ready-q table,
+section .col-right .device-q table,
+section .col-left .device table,
+section .colL .terminate table{
+    width: 100%;
+}
+section .col-left .pcb table thead,
+section .col-right .ready-q table thead,
+section .col-right .device-q table thead,
+section .col-left .device table thead,
+section .colL .terminate table thead{
+    position: sticky;
+    top: 0;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+
+section .col-left .pcb table th,td,
+section .col-right .ready-q table th,td,
+section .col-right .device-q table th,td,
+section .col-left .device table th,td,
+section .colL .terminate table th,td{
+    padding: 5px;
+    border-bottom: 1px solid #999;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+section .colL{
+    width: 75%;
+}
+
+section .colL .terminate{
+    height: 40dvh;
+    background-color: #FFFF;
+    box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+}
+section .colL .terminate .title{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #212F3D;  
+    color: #ffff;
+}
+section .colL .terminate .table{
+    height: 30dvh;
+    overflow-y: scroll;
+}
+
+section .colR{
+    width: 25%;
+}
+section .colR .control{
+    height: 40dvh;
+    background-color: #FFFF;
+    box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-webkit-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+-moz-box-shadow: 13px 15px 22px 4px rgba(0,0,0,0.74);
+
+}
+section .colR .control .title{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #212F3D;
+    color: #ffff;
+}
+section .colR .control .body{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+section .colR .control .body span{
+    color: #ff051e;
+    font-size: 18px;
+    font-weight: 500;
+}
+#MemoryUse{
+    color: greenyellow;
+}
